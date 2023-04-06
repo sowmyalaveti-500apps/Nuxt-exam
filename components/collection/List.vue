@@ -12,11 +12,11 @@
         <div class="group-hover:visible invisible">
           <PencilIcon
             class="h-5 right-0 sm:mb-[-20px] sm:ml-[12px] text-gray-600 w-4"
-            @click="emitData(note, 'edit')"
+            @click="edit(note, 'edit')"
           />
           <TrashIcon
             class="h-5 w-4 sm:ml-[40px] sm:mb-[-20px] text-gray-600 right-0"
-            @click="emitData(note, 'delete')"
+            @click="edit(note, 'delete')"
           />
         </div>
         <!-- Edit and Delete icons ends here-->
@@ -28,13 +28,14 @@
 
 <script setup lang="ts">
 import { PencilIcon, TrashIcon } from "@heroicons/vue/24/outline";
-const emit = defineEmits(["emitData"]);
+const emit = defineEmits(["edit"]);
 const props = defineProps({
   note: { type: Object, required: true },
   index: { type: Number, required: true },
 });
 
-const emitData = (note: any, value: any) => {
-  emit("emitData", { note: note, value: value, index: props.index });
+// Emit Data for edit and delete
+const edit = (note: any, value: any) => {
+  emit("edit", { note: note, value: value, index: props.index });
 };
 </script>

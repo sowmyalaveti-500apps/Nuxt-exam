@@ -66,7 +66,7 @@
                               <CollectionList
                                 :note="note"
                                 :index="index"
-                                @emitData="emitData"
+                                @edit="emitData"
                               />
                               <div>
                                 <!--Edit notes starts here-->

@@ -14,7 +14,7 @@
         <!--Send button-->
         <button
           class="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
-          @click="saveNote"
+          @click="save"
         >
           Add
         </button>
@@ -26,7 +26,7 @@
 <script setup lang="ts">
 const note = ref("");
 const emit = defineEmits(["add"]);
-const saveNote = () => {
+const save = () => {
   // Emit note to be added
   emit("add", note.value);
   note.value = "";
