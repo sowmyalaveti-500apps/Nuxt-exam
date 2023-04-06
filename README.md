@@ -40,3 +40,5 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+video link: https://drive.500apps.com/50f68184 
